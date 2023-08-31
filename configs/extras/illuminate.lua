@@ -2,10 +2,13 @@
 local spec = {
   {
     "RRethy/vim-illuminate",
-    event = { "BufReadPost" },
+    event = { "CursorHold", "CursorHoldI" },
     dependencies = "nvim-treesitter",
     config = function()
       require("illuminate").configure {
+        under_cursor = true,
+        max_file_lines = nil,
+        delay = 100,
         providers = {
           "lsp",
           "treesitter",
@@ -17,6 +20,15 @@ local spec = {
           "Outline",
           "TelescopePrompt",
           "Empty",
+          "dirvish",
+          "fugitive",
+          "alpha",
+          "packer",
+          "neogitstatus",
+          "spectre_panel",
+          "toggleterm",
+          "DressingSelect",
+          "aerial",
         },
       }
     end,

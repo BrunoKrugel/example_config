@@ -1,12 +1,9 @@
 ---@type NvPluginSpec
 local spec = {
   {
-    "phaazon/hop.nvim",
-    branch = "v2",
+    "smoka7/hop.nvim",
     cmd = { "HopWord", "HopLine", "HopLineStart", "HopWordCurrentLine" },
-    config = function()
-      require("hop").setup { keys = "etovxqpdygfblzhckisuran" }
-    end,
+    opts = { keys = "etovxqpdygfblzhckisuran" },
   },
 }
 
